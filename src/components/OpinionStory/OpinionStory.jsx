@@ -29,11 +29,16 @@ const Divider = styled.hr`
   &:last-of-type {
     display: none;
   }
+
+  @media ${QUERIES.tabletOnly} {
+      display: none;
+  }
 `
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
 
+  margin: 0 16px;
   @media not (${QUERIES.tabletOnly}) {
       display: flex;
       flex-direction: row-reverse;

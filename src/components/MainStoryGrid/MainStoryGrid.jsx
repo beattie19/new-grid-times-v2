@@ -76,6 +76,10 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+
+    @media ${QUERIES.tabletOnly} {
+      flex-direction: row;
+    }
 `;
 
 const OpinionSection = styled.section`
