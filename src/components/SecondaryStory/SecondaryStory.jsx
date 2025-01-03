@@ -1,17 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import { COLORS } from '../../constants';
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
-    <a href={`/story/${id}`}>
-      <Wrapper>
-        <Image alt={image.alt} src={image.src} />
-        <Heading>{title}</Heading>
-        <Abstract>{abstract}</Abstract>
-      </Wrapper>
-    </a>
+    <>
+      <a href={`/story/${id}`}>
+        <Wrapper>
+          <Image alt={image.alt} src={image.src} />
+          <Heading>{title}</Heading>
+          <Abstract>{abstract}</Abstract>
+        </Wrapper>
+      </a>
+      <Divider/>
+    </>
   );
 };
+
+
+const Divider = styled.hr`
+  color: ${COLORS.gray[300]};
+  size: 1px;
+  width: 100%;
+  margin: 16px 0px;
+
+  &:last-of-type {
+    display: none
+  }
+`
 
 const Wrapper = styled.article`
   display: grid;

@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { COLORS, QUERIES } from '../../constants';
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
+    <>
     <a href={`/story/${id}`}>
       <Wrapper>
         <Avatar alt="" src={avatar} />
@@ -12,11 +14,31 @@ const OpinionStory = ({ id, title, author, avatar }) => {
         </div>
       </Wrapper>
     </a>
+    <Divider />
+    </>
   );
 };
 
+const Divider = styled.hr`
+  color: ${COLORS.gray['300']};
+  size: 1px;
+  width: 100%;
+  margin: 16px 0px;
+  padding-left: 32px;
+
+  &:last-of-type {
+    display: none;
+  }
+`
+
 const Wrapper = styled.article`
   color: var(--color-gray-900);
+
+  @media not (${QUERIES.tabletOnly}) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+  }
 `;
 
 const Avatar = styled.img`
@@ -25,6 +47,10 @@ const Avatar = styled.img`
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: revert;
+  }
 `;
 
 const AuthorName = styled.p`

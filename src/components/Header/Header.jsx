@@ -75,7 +75,7 @@ const AlreadyMemberLink = styled.a`
   font-style: italic;
   color: ${COLORS.gray};
   padding-top: 4px;
-  text-decoration: underline;
+  text-decoration:
 `
 
 const DesktopHeader = styled.header`
