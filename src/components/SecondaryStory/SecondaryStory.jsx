@@ -23,7 +23,9 @@ const Divider = styled.hr`
   size: 1px;
   width: 100%;
   margin: 16px 0px;
-
+  border: none;
+  border-top: 1px solid ${COLORS.gray[300]};
+  
   &:last-of-type {
     display: none
   }

@@ -20,11 +20,12 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 };
 
 const Divider = styled.hr`
-  color: ${COLORS.gray['300']};
   size: 1px;
   width: 100%;
   margin: 16px 0px;
   padding-left: 32px;
+  border: none;
+  border-top: 1px solid ${COLORS.gray[300]};
 
   &:last-of-type {
     display: none;
@@ -38,7 +39,6 @@ const Divider = styled.hr`
 const Wrapper = styled.article`
   color: var(--color-gray-900);
 
-  margin: 0 16px;
   @media not (${QUERIES.tabletOnly}) {
       display: flex;
       flex-direction: row-reverse;
