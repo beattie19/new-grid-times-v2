@@ -90,9 +90,9 @@ const StoryList = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${QUERIES.tabletOnly} {
-    flex-direction: row;
-  }
+  // @media ${QUERIES.tabletOnly} {
+  //   flex-direction: row;
+  // }
 `;
 
 const OpinionSection = styled.section`
@@ -102,6 +102,12 @@ const OpinionSection = styled.section`
     border-left: 1px solid ${COLORS.gray[300]};
     padding-left: 24px;
     margin-left: 24px;
+  }
+
+  @media ${QUERIES.tabletOnly} {
+    & > *:nth-child(2) {
+      flex-direction: row;
+    }
   }
 `;
 
