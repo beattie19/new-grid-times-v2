@@ -105,6 +105,7 @@ const OpinionSection = styled.section`
   }
 
   @media ${QUERIES.tabletOnly} {
+    flex: 1;
     & > *:nth-child(2) {
       flex-direction: row;
     }
